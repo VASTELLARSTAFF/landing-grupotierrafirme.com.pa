@@ -1105,7 +1105,7 @@ footer {
       </div>
       <div class="nav-logo-full">
         <img src="./logo.png" alt="GTF" onerror="this.style.display='none'">
-        <span>Grupo Tierra Firme</span>
+        <span>Grupo Tierra Firme S.A.</span>
       </div>
     </div>
 
@@ -1590,22 +1590,25 @@ footer {
 
 </main>
 
-<!-- WHATSAPP -->
-<div class="wa-bubble">
-  <div class="wa-card" id="waCard">
-    <div class="wa-avatar">
-      <img src="./callcenter2.png"
-           onerror="this.src=''"
-           alt="GTF">
+<!-- ===== WHATSAPP BUBBLE ===== -->
+<div class="whatsapp-bubble" id="waBubble">
+  <div class="wa-chat-box" id="waChatBox">
+    <div class="wa-avatar" style="background:none;padding:0;overflow:hidden;">
+      <img src="./callcenter1.png"
+           alt="Asesora GTF"
+           style="width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:top;display:block;">
     </div>
-    <div class="wa-txt">
-      <strong data-es="¡Hola! ¿Tienes alguna pregunta?" data-en="Hi! Have a question?">¡Hola! ¿Tienes alguna pregunta?</strong>
-      <span data-es="Hablemos por WhatsApp." data-en="Let's chat on WhatsApp.">Hablemos por WhatsApp.</span>
+    <div class="wa-text">
+      <strong data-es="¡Hola!  ¿Tienes alguna pregunta?" data-en="Hi there!  Have a question?">¡Hola!  ¿Tienes alguna pregunta?</strong>
+      <span data-es="Hablemos por WhatsApp." data-en="Let's Talk on WhatsApp.">Hablemos por WhatsApp.</span>
     </div>
-    <span class="wa-x" onclick="document.getElementById('waCard').classList.remove('show')">✕</span>
+    <span class="wa-close" onclick="document.getElementById('waChatBox').classList.remove('show')">✕</span>
   </div>
-  <a href="https://wa.me/123456789" class="wa-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://wa.me/123456789" class="wa-btn" title="WhatsApp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 </div>
+
 
 <!-- ===== SCRIPTS ===== -->
 <script>

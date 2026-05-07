@@ -11,16 +11,16 @@
 
 <style>
 :root {
-  --gold: #C9A84C;
-  --gold-light: #E2C97E;
-  --gold-pale: #F5EDD6;
+  --gold: #C0271D;
+  --gold-light: #E03A2F;
+  --gold-pale: #F5D6D6;
   --dark: #0D0D0D;
   --dark2: #161616;
   --dark3: #1E1E1E;
   --mid: #2C2C2C;
   --text-dim: rgba(255,255,255,0.45);
   --text-muted: rgba(255,255,255,0.25);
-  --border: rgba(201,168,76,0.18);
+  --border: rgba(192,39,29,0.22);
 }
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -158,40 +158,27 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   padding-top: 20px;
   border-top: 1px solid var(--border);
   width: 100%;
-  padding-left: 0;
 }
 .nav-socials-side a {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 14px;
-  padding: 4px 12px;
+  justify-content: center;
+  width: 38px; height: 38px;
+  border-radius: 8px;
   text-decoration: none;
-  transition: transform 0.25s;
-  white-space: nowrap;
+  transition: transform 0.25s, box-shadow 0.25s;
 }
-.nav-socials-side a:hover { transform: scale(1.12); }
+.nav-socials-side a:hover { transform: scale(1.13); box-shadow: 0 4px 16px rgba(0,0,0,0.4); }
 .nav-socials-side .s-icon {
-  width: 28px; height: 28px;
-  border-radius: 6px;
+  width: 100%; height: 100%;
+  border-radius: 8px;
   display: flex; align-items:center; justify-content:center;
-  font-size: 13px;
-  flex-shrink: 0;
+  font-size: 14px;
 }
-.nav-socials-side .s-label {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  opacity: 0;
-  transform: translateX(-8px);
-  transition: opacity 0.25s 0.05s, transform 0.25s;
-}
-#sidenav:hover .s-label { opacity:1; transform:translateX(0); }
 .s-li .s-icon { background: #0A66C2; color:#fff; }
 .s-ig .s-icon { background: radial-gradient(circle at 30% 107%, #fdf497 0%,#fd5949 45%,#d6249f 60%,#285AEB 90%); color:#fff; }
 .s-fb .s-icon { background: #1877F2; color:#fff; }
@@ -273,36 +260,43 @@ main { margin-left: 72px; }
 .hero-logo-wrap {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 36px;
   margin-bottom: 32px;
   opacity: 0;
   animation: fadeUp 1.2s cubic-bezier(0.22,1,0.36,1) 0.3s forwards;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 24px 40px;
 }
 .hero-logo-img {
-  height: 130px;
+  height: 180px;
   width: auto;
-  filter: drop-shadow(0 0 30px rgba(201,168,76,0.25));
+  filter: drop-shadow(0 0 24px rgba(192,39,29,0.35));
 }
 .hero-logo-text {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 .hero-logo-text strong {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-size: clamp(2.6rem, 4.5vw, 4rem);
   font-weight: 600;
   color: #fff;
   letter-spacing: 1px;
-  line-height: 1.1;
+  line-height: 1.05;
+  white-space: nowrap;
 }
 .hero-logo-text em {
   font-family: 'Barlow Condensed', sans-serif;
   font-style: normal;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-light);
   font-weight: 500;
 }
 
@@ -1118,9 +1112,9 @@ footer {
   <div>
     <!-- Social icons — siempre a color -->
     <div class="nav-socials-side">
-      <a href="#" class="s-li"><div class="s-icon"><i class="fab fa-linkedin-in"></i></div><span class="s-label">LinkedIn</span></a>
-      <a href="#" class="s-ig"><div class="s-icon"><i class="fab fa-instagram"></i></div><span class="s-label">Instagram</span></a>
-      <a href="#" class="s-fb"><div class="s-icon"><i class="fab fa-facebook-f"></i></div><span class="s-label">Facebook</span></a>
+      <a href="#" class="s-li"><div class="s-icon"><i class="fab fa-linkedin-in"></i></div></a>
+      <a href="#" class="s-ig"><div class="s-icon"><i class="fab fa-instagram"></i></div></a>
+      <a href="#" class="s-fb"><div class="s-icon"><i class="fab fa-facebook-f"></i></div></a>
     </div>
     <!-- Lang -->
     <div class="nav-lang" style="justify-content:center; margin-top:14px;">
@@ -1277,7 +1271,7 @@ footer {
       </div>
       <div class="services-masonry">
         <div class="svc-card">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop" alt="Construcción Panamá">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80&auto=format&fit=crop" alt="Construcción Panamá">
           <div class="svc-overlay">
             <div class="svc-num">01</div>
             <div class="svc-name" data-es="Construcción" data-en="Construction">Construcción</div>
@@ -1285,7 +1279,7 @@ footer {
           </div>
         </div>
         <div class="svc-card tall">
-          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80&auto=format&fit=crop" alt="Tecnología">
+          <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&q=80&auto=format&fit=crop" alt="Tecnología">
           <div class="svc-overlay">
             <div class="svc-num">02</div>
             <div class="svc-name" data-es="Tecnología" data-en="Technology">Tecnología</div>
@@ -1293,7 +1287,7 @@ footer {
           </div>
         </div>
         <div class="svc-card">
-          <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&q=80&auto=format&fit=crop" alt="Salud">
+          <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&q=80&auto=format&fit=crop" alt="Salud">
           <div class="svc-overlay">
             <div class="svc-num">03</div>
             <div class="svc-name" data-es="Salud" data-en="Healthcare">Salud</div>
@@ -1301,7 +1295,7 @@ footer {
           </div>
         </div>
         <div class="svc-card tall">
-          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80&auto=format&fit=crop" alt="Finanzas">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80&auto=format&fit=crop" alt="Finanzas">
           <div class="svc-overlay">
             <div class="svc-num">04</div>
             <div class="svc-name" data-es="Finanzas" data-en="Finance">Finanzas</div>
@@ -1309,7 +1303,7 @@ footer {
           </div>
         </div>
         <div class="svc-card">
-          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80&auto=format&fit=crop" alt="Logística">
+          <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&q=80&auto=format&fit=crop" alt="Logística">
           <div class="svc-overlay">
             <div class="svc-num">05</div>
             <div class="svc-name" data-es="Logística" data-en="Logistics">Logística</div>
@@ -1317,7 +1311,7 @@ footer {
           </div>
         </div>
         <div class="svc-card">
-          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80&auto=format&fit=crop" alt="Consultoría">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80&auto=format&fit=crop" alt="Consultoría">
           <div class="svc-overlay">
             <div class="svc-num">06</div>
             <div class="svc-name" data-es="Consultoría" data-en="Advisory">Consultoría</div>
@@ -1342,7 +1336,7 @@ footer {
       <div class="projects-list">
         <div class="proj-row">
           <div class="proj-card">
-            <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80&auto=format&fit=crop" alt="Salud">
+            <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&q=80&auto=format&fit=crop" alt="Salud">
             <div class="proj-overlay">
               <div class="proj-tag" data-es="Salud y Distribución" data-en="Health & Distribution">Salud y Distribución</div>
               <div class="proj-name" data-es="Insumos médicos · Equipos · Logística" data-en="Medical supplies · Equipment · Logistics">Insumos médicos · Equipos · Logística</div>
@@ -1376,7 +1370,7 @@ footer {
         </div>
         <div class="proj-row">
           <div class="proj-card">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80&auto=format&fit=crop" alt="Tecnología">
+            <img src="https://images.unsplash.com/photo-1551808525-51a94da548ce?w=800&q=80&auto=format&fit=crop" alt="Tecnología">
             <div class="proj-overlay">
               <div class="proj-tag" data-es="Tecnología y Seguridad" data-en="Technology & Security">Tecnología y Seguridad</div>
               <div class="proj-name" data-es="Videovigilancia · Monitoreo · Automatización" data-en="Surveillance · Monitoring · Automation">Videovigilancia · Monitoreo · Automatización</div>
@@ -1391,7 +1385,7 @@ footer {
             </div>
           </div>
           <div class="proj-card">
-            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80&auto=format&fit=crop" alt="Finanzas">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80&auto=format&fit=crop" alt="Finanzas">
             <div class="proj-overlay">
               <div class="proj-tag" data-es="Servicios Financieros" data-en="Financial Services">Servicios Financieros</div>
               <div class="proj-name" data-es="Financiamiento · Estructuración · Asesoría" data-en="Financing · Structuring · Advisory">Financiamiento · Estructuración · Asesoría</div>
